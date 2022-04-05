@@ -9,6 +9,9 @@ import os
 import numpy as n
 import h5py
 
+
+# sshfs eiscat@goppi.eiscat.uit.no:/ goppi
+
 idir="/home/j/goppi/data/leo_bpark_2.1u_NO@uhf"
 
 # this is how much data is in there
@@ -57,7 +60,7 @@ for fi,f in enumerate(fl):
         
     plt.plot(tipp,n.unwrap(n.angle(T[:,9])))
     plt.title(stuffr.unix2datestr(t0/1e6))
-    plt.grid()
+    plt.grid(markevery=1.0)
     plt.xlabel("Time (s)")
     plt.ylabel("Phase (rad)")
     plt.show()
